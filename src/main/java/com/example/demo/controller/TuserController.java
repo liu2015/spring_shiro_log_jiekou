@@ -6,6 +6,8 @@ import com.example.demo.service.TuserService;
 import com.example.demo.service.impl.TuserServiceimpl;
 import okhttp3.Response;
 import org.omg.CORBA.PUBLIC_MEMBER;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
@@ -28,11 +30,17 @@ import java.util.List;
 @Controller
 public class TuserController {
 
+    private final  static Logger logger=LoggerFactory.getLogger( TuserController.class );
+
     @Autowired
     TuserService tuserServiceimpl;
 
     @RequestMapping("/list")
     public String findall(ModelMap map) {
+        logger.info("logback 成功了");
+        logger.error("logback 成功了");
+        logger.debug("logback 成功了");
+
         /**
          * @Method findall 返回所有查询结果
          * @Author ZHY
@@ -62,6 +70,10 @@ public class TuserController {
          * @Exception
          * @Date 2019/10/31 21:32
          */
+        logger.info("logback 成功了");
+        logger.error("logback 成功了");
+        logger.debug("logback 成功了");
+
         TUser tuser=new TUser();
         tuser.setUserId( userId );
         TUser selectone=tuserServiceimpl.selectOne( tuser );
@@ -116,6 +128,10 @@ public class TuserController {
     }
     @RequestMapping("post/{userId}")
     public String post(@PathVariable String userId ) {
+        logger.info("logback 成功了");
+        logger.error("logback 成功了");
+        logger.debug("logback 成功了");
+
         System.out.println( "执行接口推送post格式" );
         System.out.println( userId );
         jsoncli ddd=new jsoncli();

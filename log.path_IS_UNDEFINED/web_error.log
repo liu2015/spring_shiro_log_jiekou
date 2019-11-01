@@ -1,0 +1,4 @@
+2019-11-01 16:50:47.423 [http-nio-8080-exec-5] ERROR com.example.demo.controller.TuserController - logback 成功了
+2019-11-01 16:50:51.985 [http-nio-8080-exec-7] ERROR com.example.demo.controller.TuserController - logback 成功了
+2019-11-01 16:50:53.802 [http-nio-8080-exec-9] ERROR com.example.demo.controller.TuserController - logback 成功了
+2019-11-01 16:50:53.900 [http-nio-8080-exec-1] ERROR com.example.demo.controller.TuserController - logback 成功了
