@@ -1,0 +1,3 @@
+2019-11-01 16:21:31.581 [main] WARN  org.mybatis.spring.mapper.ClassPathMapperScanner - Skipping MapperFactoryBean with name 'sysUserMapper' and 'com.example.demo.mapper.SysUserMapper' mapperInterface. Bean already defined with the same name!
+2019-11-01 16:21:31.581 [main] WARN  org.mybatis.spring.mapper.ClassPathMapperScanner - Skipping MapperFactoryBean with name 'TUserMapper' and 'com.example.demo.mapper.TUserMapper' mapperInterface. Bean already defined with the same name!
+2019-11-01 16:21:31.581 [main] WARN  org.mybatis.spring.mapper.ClassPathMapperScanner - No MyBatis mapper was found in '[com.example.demo]' package. Please check your configuration.

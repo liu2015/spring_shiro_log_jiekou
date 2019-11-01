@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.example.demo.mapper.TUserMapper">
+  <resultMap id="BaseResultMap" type="com.example.demo.entity.TUser">
+    <!--
+      WARNING - @mbg.generated
+    -->
+    <id column="user_id" jdbcType="VARCHAR" property="userId" />
+    <result column="password" jdbcType="VARCHAR" property="password" />
+    <result column="phone" jdbcType="VARCHAR" property="phone" />
+    <result column="user_name" jdbcType="VARCHAR" property="userName" />
+  </resultMap>
+    <update id="add">
+        update t_user set password=#{password},phone=#{phone},user_name=#{userName}
+        where user_id=#{userId}
+    </update>
+  <insert id="insert1">
+    <selectKey keyProperty="userId" resultType="string" order="BEFORE">
+      SELECT uuid();
+    </selectKey>
+    insert into t_user (password,phone,user_id,user_name)values(#{password},#{phone},#{userId},#{userName})
+  </insert>
+
+
+  <select id="seach" resultType="com.example.demo.entity.TUser" resultMap="BaseResultMap">
+    select * from t_user where user_name=#{userName} or phone=#{phone}
+
+  </select>
+</mapper>
