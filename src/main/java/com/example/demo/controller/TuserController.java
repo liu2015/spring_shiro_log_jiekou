@@ -134,11 +134,16 @@ public class TuserController {
 
         System.out.println( "执行接口推送post格式" );
         System.out.println( userId );
+        // 调用推送方法
         jsoncli ddd=new jsoncli();
         try {
             Response dd=null;
-            dd=ddd.run();
-            System.out.println( "执行成功"+dd );
+            String ddw;
+            ddw=ddd.run();
+            System.out.println("是不是调用方法执行");
+//            dd=ddd.run();
+            System.out.println("是不是调用方法执行");
+            System.out.println( "执行成功"+ddw );
         } catch (IOException e) {
             e.printStackTrace();
         }
