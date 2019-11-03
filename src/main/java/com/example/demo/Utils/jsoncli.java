@@ -52,5 +52,30 @@ public class jsoncli {
 
     }
 
+    public String run1(String args) throws IOException {
+
+        System.out.println(args);
+
+        OkHttpClient client =new OkHttpClient();
+        MediaType mediaType =MediaType.parse("application/json;charset=utf-8");
+        RequestBody body1=RequestBody.create(mediaType,args);
+        //请求内容
+        Request request=new Request.Builder()
+                .url("http://localhost:8080/jsons-service/v2" )
+                .post(body1)
+                .addHeader("Content-Type","application/json")
+                .build();
+
+        // 执行请求命令 ,返回是response
+        Response response=client.newCall(request).execute();
+
+        System.out.println(response.code());
+
+        String bodyresponse=response.body().string();
+
+
+        return bodyresponse;
+    }
+
 
 }

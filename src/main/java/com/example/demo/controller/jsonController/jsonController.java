@@ -1,8 +1,9 @@
 package com.example.demo.controller.jsonController;
 
-import com.alibaba.fastjson.JSON;
+
 import com.example.demo.controller.TuserController;
 import com.example.demo.entity.ResponsePram;
+import com.google.gson.Gson;
 import jdk.nashorn.internal.runtime.JSONFunctions;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -39,7 +40,8 @@ public class jsonController {
         Map<String, ResponsePram> map=new HashMap<String, ResponsePram>();
         ResponsePram rp=new ResponsePram("100","测试成功");
         map.put("Response",rp);
-        String json= JSON.toJSONString(map);
+        Gson gson=new Gson();
+        String json= gson.toJson(map);
         System.out.println("接口返回"+json);
         logger.info("接口返回`````````"+json);
 

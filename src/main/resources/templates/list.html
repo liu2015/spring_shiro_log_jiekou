@@ -23,6 +23,7 @@
             <th>edit</th>
             <th>delete</th>
             <th>接口推送</th>
+            <th>接口一条推送</th>
         </tr>
         </thead>
         <tbody>
@@ -34,6 +35,7 @@
             <td><a th:href="${'/edit/'+user.userId}">edit</a> </td>
             <td><a th:href="${'/del/'+user.userId}">delete</a> </td>
             <td><a th:href="${'/post/'+user.userId}">接口推送</a> </td>
+            <td><a th:href="${'/postone/'+user.userId}">接口一条推送</a> </td>
         </tr>
         </tbody>
     </table>
