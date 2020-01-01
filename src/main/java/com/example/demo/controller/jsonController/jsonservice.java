@@ -28,6 +28,17 @@ public class jsonservice {
     @ResponseBody
     @SelectProvider(type = BaseSelectProvider.class, method = "dynamicSQL")
     public String selectOne(@PathVariable String userId) throws IOException {
+        /**
+         * @Method selectOne
+         * @Author os
+         * @Version  1.0
+         * @Description
+         * @param userId
+         * @Return java.lang.String
+         * @Exception 
+         * @Date 11/11/19 
+         */
+
         TUser dd1= new TUser();
         dd1.setUserId(userId);
 

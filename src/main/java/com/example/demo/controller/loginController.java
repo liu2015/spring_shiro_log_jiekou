@@ -40,6 +40,7 @@ public class loginController {
     }
     @RequestMapping("/tologin")
     public String selectOne(SysUser user, ModelMap map) {
+
         Subject subject=SecurityUtils.getSubject();
         UsernamePasswordToken usertoken=new UsernamePasswordToken( user.getLoginName(),user.getPassword() );
 

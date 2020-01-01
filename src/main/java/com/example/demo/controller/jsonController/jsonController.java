@@ -30,9 +30,21 @@ import java.util.Map;
 public class jsonController {
     private final  static Logger logger= LoggerFactory.getLogger( TuserController.class );
 
+
     @RequestMapping(value="v2",method=RequestMethod.POST,produces="application/json;charset=UTF-8")
     @ResponseBody
     public String erpRequest(@RequestBody String parms){
+/**
+ * @Method erpRequest
+ * @Author os
+ * @Version  1.0
+ * @Description
+ * @param parms
+ * @Return java.lang.String
+ * @Exception 
+ * @Date 11/11/19 
+ */
+
         System.out.println( "一下是接收方的内容" );
         System.out.println( parms );
         System.out.println( "这里已经接口接收到信息" );

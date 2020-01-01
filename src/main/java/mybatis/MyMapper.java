@@ -8,7 +8,7 @@ import tk.mybatis.mapper.common.MySqlMapper;
  * @Package: mybatis
  * @ClassName: MyMapper
  * @Author: ZHY
- * @Description: ${description}
+ * @Description: ${description
  * @Date: 2019/10/30 9:50
  * @Version: 1.0
  */
