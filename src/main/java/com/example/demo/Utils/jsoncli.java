@@ -61,7 +61,9 @@ public class jsoncli {
         RequestBody body1=RequestBody.create(mediaType,args);
         //请求内容
         Request request=new Request.Builder()
-                .url("http://localhost:8080/jsons-service/v2" )
+                .url("http://49.235.168.233:8088/jsons-service/v2" )
+                //http://localhost:8088/jsons-service/v2
+
                 .post(body1)
                 .addHeader("Content-Type","application/json")
                 .build();

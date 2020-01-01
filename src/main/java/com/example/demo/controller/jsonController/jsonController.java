@@ -8,10 +8,7 @@ import jdk.nashorn.internal.runtime.JSONFunctions;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Controller;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.bind.annotation.ResponseBody;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -26,6 +23,8 @@ import java.util.Map;
  * @Version: 1.0
  */
 @Controller
+//@CrossOrigin(allowCredentials="true",maxAge = 3600) 2.0boot版本改动,要加入allowCredentials 默认是false 改称true
+@CrossOrigin(origins = "*",maxAge = 3600) //解决跨域的问题的注释  * 代表任意,
 @RequestMapping("/jsons-service")
 public class jsonController {
     private final  static Logger logger= LoggerFactory.getLogger( TuserController.class );
