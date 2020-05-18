@@ -1,3 +1,11 @@
+/*
+ * @Author: your name
+ * @Date: 2020-05-18 18:45:27
+ * @LastEditTime: 2020-05-18 20:19:56
+ * @LastEditors: Please set LastEditors
+ * @Description: In User Settings Edit
+ * @FilePath: /spring_shiro_log_jiekou/src/main/java/com/example/demo/controller/loginController.java
+ */ 
 package com.example.demo.controller;
 
 import com.example.demo.entity.SysUser;
@@ -39,6 +47,7 @@ public class loginController {
 
         return "login1";
     }
+    
     @RequestMapping("/tologin")
     public String selectOne(SysUser user, ModelMap map) {
 
