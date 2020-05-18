@@ -28,6 +28,7 @@ public class loginController {
     @Autowired
     SysUserServiceimpl sysUserServiceimpl;
 
+    // @RequestMapping("/")
     @RequestMapping("/")
     public String index(){
 
